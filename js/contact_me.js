@@ -25,7 +25,7 @@ $(function() {
       $.ajax({
         url: 'mail/send_Email.php',
         dataType:"text",
-        moethod: "POST",
+        method: "POST",
         data: {
           name: name,
           phone: phone,

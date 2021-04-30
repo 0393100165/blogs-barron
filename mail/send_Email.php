@@ -1,6 +1,6 @@
 <?php
   echo "OK SENT";
-  echo("<script>console.log('PHP: " . $email . "');</script>");
+  echo("<script>console.log('PHP: " . $email_address . "');</script>");
   
 require '\PHPMailer\autoload.php';
 require '\PHPMailer\PHPMailer.php';
@@ -64,5 +64,7 @@ $message = strip_tags(htmlspecialchars($_POST['message']));
                 <span>'.$e->getMessage().'</span>
               </div>';
   }
-
+  echo "OK SENT";
+  echo("<script>console.log('PHP: " . $email_address . "');</script>");
+  
 ?>
