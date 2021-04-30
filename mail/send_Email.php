@@ -2,10 +2,10 @@
   echo "OK SENT";
   echo("<script>console.log('PHP: " . $email . "');</script>");
   
-require '\autoload.php';
-require '\src\Exception.php';
-require '\src\PHPMailer.php';
-require '\src\SMTP.php';
+require '\PHPMailer\autoload.php';
+require '\PHPMailer\PHPMailer.php';
+require '\PHPMailer\Exception.php';
+require '\PHPMailer\SMTP.php';
 
 
 use PHPMailer\PHPMailer\PHPMailer;
