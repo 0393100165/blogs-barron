@@ -15,10 +15,10 @@ $(function() {
       var firstName = name; // For Success/Failure Message
 
       // Check for white space in name for Success/Fail message
-      if (firstName.indexOf(' ') >= 0) {
-        firstName = name.split(' ').slice(0, -1).join(' ');
-      }
-      $this = $("#sentMessage");
+      // if (firstName.indexOf(' ') >= 0) {
+      //   firstName = name.split(' ').slice(0, -1).join(' ');
+      // }
+      $this = $("#sendMessageButton");
       
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
      
@@ -57,7 +57,7 @@ $(function() {
         },
         complete: function() {
           setTimeout(function() {
-            $this.prop("disabled", true); // Re-enable submit button when AJAX call is complete
+            $this.prop("disabled", false); // Re-enable submit button when AJAX call is complete
           }, 1000);
         }
       });
