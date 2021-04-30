@@ -1,18 +1,21 @@
 <?php
   echo "OK SENT";
   echo("<script>console.log('PHP: " . $email . "');</script>");
-  use PHPMailer\PHPMailer\PHPMailer;
-  use PHPMailer\PHPMailer\SMTP;
-  use PHPMailer\PHPMailer\Exception;
+  
+require '\autoload.php';
+require '\src\Exception.php';
+require '\src\PHPMailer.php';
+require '\src\SMTP.php';
 
-require 'vendor/autoload.php';
-require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
-require 'vendor/phpmailer/phpmailer/src/SMTP.php';
-require 'vendor/phpmailer/phpmailer/src/Exception.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
 $mail = new PHPMailer(true);
 
 $alert = '';
+
 
 if(empty($_POST['name'])      ||
    empty($_POST['email'])     ||
