@@ -44,11 +44,11 @@ $message = strip_tags(htmlspecialchars($_POST['message']));
     $mail->Port = 587;
 
     $mail->setFrom('person290421@gmail.com'); // Gmail address which you used as SMTP server
-    $mail->addAddress('person290421@gmail.com'); // Email address where you want to receive emails (you can use any of your gmail address including the gmail address which you used as SMTP server)
+    $mail->addAddress($email_address); // Email address where you want to receive emails (you can use any of your gmail address including the gmail address which you used as SMTP server)
 
     $mail->isHTML(true);
     $mail->Subject = 'Message Received (Contact Page)';
-    $mail->Body = "<h3>Name : $name <br>Email: $email <br>Message : $message</h3>";
+    $mail->Body = "<h3>Name : $name <br>Email: $email_address <br>Message : $message</h3>";
 
     if($mail->send()) {
       $response = "email is sent";
